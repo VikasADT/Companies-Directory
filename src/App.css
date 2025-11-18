@@ -6,6 +6,17 @@
   height: 40vmin;
   pointer-events: none;
 }
+.top-controls {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  z-index: 999;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -34,5 +45,52 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.top-right-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 2000;
+  align-items: center;
+}
+
+/* Make sure logout button looks premium */
+.logout-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #ff4747;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(255, 71, 71, 0.4);
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  transform: scale(1.12);
+  background: #ff2e2e;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .top-right-controls {
+    top: 12px;
+    right: 12px;
+    gap: 8px;
+  }
+
+  .logout-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
   }
 }

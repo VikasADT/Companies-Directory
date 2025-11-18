@@ -1,24 +1,224 @@
-.theme-toggle-container {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px 24px;
-}
-/* GLOBAL DARK MODE ROOT */
-.dark {
-  background: #0f1116;
-  color: #e5e7eb;
-  transition: background 0.35s ease, color 0.3s ease;
+/* ================================
+    GLOBAL DARK MODE ROOT
+================================ */
+body.dark {
+  background: #0f1116 !important;
+  color: #e5e7eb !important;
+  transition: background 0.35s ease, color 0.35s ease;
 }
 
-.dark * {
+/* Smooth transitions for all child elements */
+body.dark * {
   transition: background 0.35s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Light toggle background */
+
+
+/* ================================
+    TOP BAR + ICONS
+================================ */
+body.dark .topbar {
+  background: #1a1d23;
+  border-bottom: 1px solid #2b2f38;
+}
+
+body.dark .topbar-title {
+  color: #e5e7eb;
+}
+
+body.dark .logout-circle {
+  background: #1f2430;
+  color: #fff;
+  border-color: #2a3038;
+}
+
+body.dark .logout-circle:hover {
+  background: #2c3240;
+}
+
+
+
+/* ================================
+    FILTER BAR
+================================ */
+body.dark .filters-navbar {
+  background: #1a1d23;
+  border-color: #2a3038;
+}
+
+body.dark .filter-control {
+  background: #11141a;
+  border-color: #2a3038;
+  color: #e5e7eb;
+}
+
+body.dark .filter-control:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+body.dark .autocomplete-box {
+  background: #1a1d23;
+  border-color: #2a3038;
+}
+
+body.dark .autocomplete-item {
+  color: #e5e7eb;
+}
+
+body.dark .autocomplete-item:hover {
+  background: #2d3350;
+}
+
+
+
+/* ================================
+    FILTER CHIPS
+================================ */
+body.dark .chip {
+  background: #312e81;
+  color: #c7d2fe;
+  border-color: #4338ca;
+}
+
+body.dark .chip:hover {
+  background: #4338ca;
+  color: white;
+}
+
+
+
+/* ================================
+    COMPANY CARDS
+================================ */
+body.dark .company-card {
+  background: #1a1d23;
+  border-color: #2a3038;
+  color: #e5e7eb;
+}
+
+body.dark .company-card:hover {
+  background: #242933;
+}
+
+body.dark .company-card .company-name {
+  color: #fff;
+}
+
+body.dark .company-card .company-location,
+body.dark .company-card .company-industry {
+  color: #cbd5e1;
+}
+
+
+
+/* ================================
+    TABLE VIEW
+================================ */
+body.dark .glass-table-wrapper {
+  background: #1a1d23;
+  border: 1px solid #2a3038;
+}
+
+body.dark table {
+  background: #1a1d23;
+  color: #e5e7eb;
+}
+
+body.dark th {
+  background: #242933 !important;
+  color: #fff !important;
+  border-color: #2a3038 !important;
+}
+
+body.dark td {
+  background: #1a1d23 !important;
+  color: #e5e7eb !important;
+  border-color: #2a3038 !important;
+}
+
+
+
+/* ================================
+    PAGINATION
+================================ */
+body.dark .page-btn {
+  background: #1a1d23;
+  color: #e5e7eb;
+  border-color: #2a3038;
+}
+
+body.dark .page-btn:hover {
+  background: #242933;
+}
+
+body.dark .page-btn.active {
+  background: #4f46e5;
+  color: #fff;
+  border-color: transparent;
+}
+
+
+
+/* ================================
+    LOGIN PAGE
+================================ */
+body.dark .login-box {
+  background: #1a1d23 !important;
+  border-color: #2a3038 !important;
+  color: white;
+}
+
+body.dark .login-input {
+  background: #11141a !important;
+  border-color: #2a3038 !important;
+  color: #fff !important;
+}
+
+body.dark .demo-box {
+  background: #2a3038;
+  border-color: #3a4250;
+}
+
+
+
+/* ================================
+    TOGGLE BUTTON (MorphingToggle)
+================================ */
+.theme-toggle-container {
+  padding: 0;
+}
+
 .theme-toggle-btn {
   --toggle-bg: #ffffff;
 }
 
-.dark .theme-toggle-btn {
+body.dark .theme-toggle-btn {
   --toggle-bg: #1f2430;
+}
+:root {
+  --text-title: #111827;
+  --text-sub: #4b5563;
+
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --shadow: rgba(0,0,0,0.08);
+
+  --accent: #7c3aed; /* purple */
+  
+  --table-head: #f3f4f6;
+  --table-hover: #f9fafb;
+}
+.dark {
+  --text-title: #f3f4f6;
+  --text-sub: #9ca3af;
+
+  --card-bg: #1f2430;
+  --card-border: #2d3344;
+  --shadow: rgba(0,0,0,0.4);
+
+  --accent:#7c3aed; /* lighter purple */
+
+  --table-head: #2a303f;
+  --table-hover: #1f2430;
 }

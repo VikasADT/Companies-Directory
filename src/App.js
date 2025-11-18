@@ -1,29 +1,64 @@
+// src/App.js
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 import Home from "./pages/Home";
-import "./styles/dark.css";
-import MorphingToggle from "./components/MorphingToggle";
+import Login from "./pages/Login";
+import TopBar from "./components/TopBar";
 
 export default function App() {
   const [dark, setDark] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("auth") === "true");
 
+  // Apply theme to BODY
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    if (saved === "dark") setDark(true);
+    setDark(saved === "dark");
   }, []);
 
+  useEffect(() => {
+    if (dark) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [dark]);
+
   const toggleTheme = () => {
-    const newVal = !dark;
-    setDark(newVal);
-    localStorage.setItem("theme", newVal ? "dark" : "light");
+    const newDark = !dark;
+    setDark(newDark);
+    localStorage.setItem("theme", newDark ? "dark" : "light");
+  };
+
+  const handleLogin = () => {
+    localStorage.setItem("auth", "true");
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("auth");
+    setIsLoggedIn(false);
+    window.location.href = "/login";
   };
 
   return (
-    <div className={dark ? "dark" : ""}>
-      <div className="theme-toggle-container">
-        <MorphingToggle dark={dark} toggle={toggleTheme} />
-      </div>
+    <Router>
 
-      <Home />
-    </div>
+      {/* Show TopBar only when logged in */}
+      {isLoggedIn && (
+        <TopBar 
+          dark={dark} 
+          toggleTheme={toggleTheme}
+          onLogout={handleLogout}
+        />
+      )}
+
+      <Routes>
+        <Route path="/login" element={!isLoggedIn ? <Login onLogin={handleLogin} /> : <Navigate to="/" />} />
+        <Route path="/" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+
+    </Router>
   );
 }
