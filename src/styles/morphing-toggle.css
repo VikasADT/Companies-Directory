@@ -1,0 +1,108 @@
+/* ================================
+   PREMIUM MORPHING THEME TOGGLE
+   ================================ */
+
+.morph-toggle {
+  width: 68px;
+  height: 34px;
+  border-radius: 34px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* Light mode background */
+.morph-toggle.light {
+  background: #e5e7eb;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Dark mode background */
+.morph-toggle.dark {
+  background: #4f46e5;
+  box-shadow: 0 0 14px rgba(79,70,229,0.4);
+}
+
+/* Thumb (sun/moon inside it) */
+.morph-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+
+  /* elastic easing */
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.4s ease,
+              border-radius 0.4s ease;
+  overflow: hidden;
+}
+
+/* Move to right in dark mode */
+.morph-toggle.dark .morph-thumb {
+  transform: translateX(34px);
+  background: #1f2430;
+}
+
+/* SUN CORE (center circle) */
+.sun-core {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #facc15;
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+  transition: opacity 0.4s ease, transform 0.45s ease;
+}
+
+/* SUN RAYS */
+.sun-ray {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #facc15;
+  border-radius: 50%;
+  transition: opacity 0.4s ease, transform 0.45s ease;
+}
+
+.ray1 { top: 2px; left: 12px; }
+.ray2 { bottom: 2px; left: 12px; }
+.ray3 { top: 12px; right: 2px; }
+
+/* HIDE SUN IN DARK MODE */
+.morph-toggle.dark .sun-core,
+.morph-toggle.dark .sun-ray {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* MOON CRESCENT (cutout shape) */
+.moon-cutout {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #1f2430;
+  border-radius: 50%;
+  top: 5px;
+  left: 14px;
+  opacity: 0;
+  transform: translateX(10px) scale(0.3);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* SHOW MOON IN DARK MODE */
+.morph-toggle.dark .moon-cutout {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* GLOW EFFECT IN DARK MODE */
+.morph-toggle.dark .morph-thumb {
+  box-shadow: 0 0 12px rgba(255,255,255,0.12);
+}

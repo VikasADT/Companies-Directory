@@ -1,0 +1,91 @@
+.company-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 22px;
+  border: 1px solid var(--card-border);
+  transition: 0.25s ease;
+  cursor: pointer;
+
+  box-shadow: 0 6px 24px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* animated subtle gradient shine */
+.company-card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.12) 48%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  transition: 0.8s ease;
+  opacity: 0;
+}
+
+.company-card:hover::before {
+  opacity: 1;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px var(--shadow);
+  border-color: var(--accent);
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.company-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  background: var(--logo-bg);
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--logo-border);
+}
+
+.company-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text-title);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.company-sub {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  text-align: center;
+  margin-top: 4px;
+}
+
+.company-tags {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.tag {
+  padding: 5px 14px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.78rem;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.company-card {
+  cursor: pointer;
+}

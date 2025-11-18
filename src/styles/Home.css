@@ -1,0 +1,84 @@
+/* MAIN WRAPPER */
+.home-wrapper {
+  animation: fadeIn 0.3s ease;
+}
+
+/* PAGE TITLE */
+.home-title {
+  font-weight: 700;
+  color: var(--text-title);
+  letter-spacing: -0.5px;
+}
+
+/* HEADER CONTAINER */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+/* TOGGLE BUTTON GROUP */
+.view-toggle {
+  display: flex;
+  gap: 10px;
+  background: var(--card-bg);
+  padding: 6px;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+/* INDIVIDUAL BUTTONS */
+.toggle-btn {
+  padding: 8px 18px;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  border: none;
+  transition: 0.25s ease;
+  font-weight: 500;
+}
+
+.toggle-btn:hover {
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* ACTIVE TOGGLE BUTTON */
+.toggle-btn.active {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+}
+
+/* LOADING TEXT */
+.loading-text {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: var(--text-sub);
+}
+
+/* EMPTY TEXT */
+.empty-text {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-sub);
+}
+
+/* GLASS EFFECT WRAPPER FOR TABLE */
+.glass-table-wrapper {
+  padding: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

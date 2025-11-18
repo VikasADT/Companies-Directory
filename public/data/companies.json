@@ -1,0 +1,224 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Google",
+      "location": "Bangalore",
+      "industry": "Technology",
+      "description": "Search engine, cloud computing, AI and productivity tools.",
+      "founded": 1998,
+      "employees": 156000,
+      "website": "https://www.google.com",
+      "logo": "/logos/google.svg"
+    },
+    {
+      "id": 2,
+      "name": "Apple",
+      "location": "Hyderabad",
+      "industry": "Electronics",
+      "description": "Designs consumer electronics, software and online services.",
+      "founded": 1976,
+      "employees": 154000,
+      "website": "https://www.apple.com",
+      "logo": "/logos/apple.svg"
+    },
+    {
+      "id": 3,
+      "name": "Microsoft",
+      "location": "Hyderabad",
+      "industry": "Technology",
+      "description": "Develops OS, enterprise software and cloud platforms.",
+      "founded": 1975,
+      "employees": 221000,
+      "website": "https://www.microsoft.com",
+      "logo": "/logos/microsoft.svg"
+    },
+    {
+      "id": 4,
+      "name": "Meta",
+      "location": "Bangalore",
+      "industry": "Technology",
+      "description": "Social media, VR/AR and AI-driven digital platforms.",
+      "founded": 2004,
+      "employees": 86000,
+      "website": "https://about.facebook.com",
+      "logo": "/logos/meta.svg"
+    },
+    {
+      "id": 5,
+      "name": "Netflix",
+      "location": "Mumbai",
+      "industry": "Entertainment",
+      "description": "Streaming platform for movies, series and original content.",
+      "founded": 1997,
+      "employees": 12500,
+      "website": "https://www.netflix.com",
+      "logo": "/logos/netflix.svg"
+    },
+    {
+      "id": 6,
+      "name": "Uber",
+      "location": "Hyderabad",
+      "industry": "Mobility",
+      "description": "Ride-sharing, mobility and delivery services.",
+      "founded": 2009,
+      "employees": 32000,
+      "website": "https://www.uber.com",
+      "logo": "/logos/uber.svg"
+    },
+    {
+      "id": 7,
+      "name": "Airbnb",
+      "location": "Goa",
+      "industry": "Hospitality",
+      "description": "Homestays, vacation rentals and travel experiences.",
+      "founded": 2008,
+      "employees": 4500,
+      "website": "https://www.airbnb.com",
+      "logo": "/logos/airbnb.svg"
+    },
+    {
+      "id": 8,
+      "name": "Stripe",
+      "location": "Remote",
+      "industry": "Fintech",
+      "description": "Online payments and billing infrastructure for the internet.",
+      "founded": 2010,
+      "employees": 10000,
+      "website": "https://www.stripe.com",
+      "logo": "/logos/stripe.svg"
+    },
+    {
+      "id": 9,
+      "name": "TCS",
+      "location": "Bangalore",
+      "industry": "IT Services",
+      "description": "Global leader in IT services, consulting and business solutions.",
+      "founded": 1968,
+      "employees": 600000,
+      "website": "https://www.tcs.com",
+      "logo": "/logos/tcs.svg"
+    },
+    {
+      "id": 10,
+      "name": "Infosys",
+      "location": "Bangalore",
+      "industry": "IT Services",
+      "description": "Consulting, digital transformation and enterprise solutions.",
+      "founded": 1981,
+      "employees": 341000,
+      "website": "https://www.infosys.com",
+      "logo": "/logos/infosys.svg"
+    },
+    {
+      "id": 11,
+      "name": "Wipro",
+      "location": "Hyderabad",
+      "industry": "IT Services",
+      "description": "Technology consulting and cloud modernization services.",
+      "founded": 1945,
+      "employees": 210000,
+      "website": "https://www.wipro.com",
+      "logo": "/logos/wipro.svg"
+    },
+    {
+      "id": 12,
+      "name": "Zoho",
+      "location": "Chennai",
+      "industry": "SaaS",
+      "description": "Cloud-based business applications suite.",
+      "founded": 1996,
+      "employees": 9000,
+      "website": "https://www.zoho.com",
+      "logo": "/logos/zoho.svg"
+    },
+    {
+      "id": 13,
+      "name": "Nvidia",
+      "location": "Pune",
+      "industry": "Semiconductors",
+      "description": "GPUs, AI hardware and accelerated computing.",
+      "founded": 1993,
+      "employees": 20000,
+      "website": "https://www.nvidia.com",
+      "logo": "/logos/nvidia.svg"
+    },
+    {
+      "id": 14,
+      "name": "Razorpay",
+      "location": "Bangalore",
+      "industry": "Fintech",
+      "description": "Payments gateway and subscription billing services.",
+      "founded": 2013,
+      "employees": 3000,
+      "website": "https://razorpay.com",
+      "logo": "/logos/razorpay.svg"
+    },
+    {
+      "id": 15,
+      "name": "Paytm",
+      "location": "Noida",
+      "industry": "Fintech",
+      "description": "Digital payments, banking and finance services.",
+      "founded": 2010,
+      "employees": 25000,
+      "website": "https://www.paytm.com",
+      "logo": "/logos/paytm.svg"
+    },
+    {
+      "id": 16,
+      "name": "Tesla",
+      "location": "USA",
+      "industry": "Automotive",
+      "description": "Electric vehicles, clean energy and autonomous tech.",
+      "founded": 2003,
+      "employees": 110000,
+      "website": "https://www.tesla.com",
+      "logo": "/logos/tesla.svg"
+    },
+    {
+      "id": 17,
+      "name": "Slack",
+      "location": "USA",
+      "industry": "Collaboration",
+      "description": "Team communication and workflow platform.",
+      "founded": 2009,
+      "employees": 4000,
+      "website": "https://www.slack.com",
+      "logo": "/logos/slack.svg"
+    },
+    {
+      "id": 18,
+      "name": "Meta Platforms",
+      "location": "Hyderabad",
+      "industry": "Technology",
+      "description": "Digital social platforms, AI technologies and VR.",
+      "founded": 2004,
+      "employees": 86000,
+      "website": "https://www.meta.com",
+      "logo": "/logos/meta.svg"
+    },
+    {
+      "id": 19,
+      "name": "Zomato",
+      "location": "Delhi",
+      "industry": "Delivery",
+      "description": "Restaurant discovery and food delivery service.",
+      "founded": 2008,
+      "employees": 7500,
+      "website": "https://www.zomato.com",
+      "logo": "/logos/zomato.svg"
+    },
+    {
+      "id": 20,
+      "name": "HCL Tech",
+      "location": "Noida",
+      "industry": "IT Services",
+      "description": "Enterprise engineering, IT consulting and digital solutions.",
+      "founded": 1976,
+      "employees": 220000,
+      "website": "https://www.hcltech.com",
+      "logo": "/logos/hcltech.svg"
+    }
+  ]
+}

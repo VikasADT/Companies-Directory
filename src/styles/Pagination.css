@@ -1,0 +1,91 @@
+/* OUTER WRAPPER FOR FLOATING + STICKY */
+.pagination-wrapper {
+  position: relative;
+  margin-top: 40px;
+}
+
+/* MAIN CONTAINER */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+
+  width: fit-content;
+  margin: auto;
+}
+
+/* BUTTONS */
+.page-btn {
+  padding: 8px 16px;
+  min-width: 44px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+/* HOVER */
+.page-btn:hover:not(.active):not(.dots) {
+  background: #f3e8ff;
+  border-color: #d8b4fe;
+  color: #6d28d9;
+}
+
+/* ACTIVE PAGE BUTTON */
+.page-btn.active {
+  background: #6d28d9;
+  color: white;
+  border-color: #5b21b6;
+  box-shadow: 0 4px 14px rgba(109, 40, 217, 0.35);
+  transform: translateY(-3px);
+}
+
+/* ARROWS */
+.page-btn.arrow {
+  font-size: 1.2rem;
+  padding: 6px 12px;
+  font-weight: bold;
+}
+
+/* DOTS (Ellipsis) */
+.page-btn.dots {
+  cursor: default;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+}
+
+/* STICKY BOTTOM ON MOBILE */
+@media (max-width: 576px) {
+  .pagination-wrapper {
+    position: sticky;
+    bottom: 12px;
+    z-index: 20;
+  }
+
+  .pagination-container {
+    padding: 10px 14px;
+    gap: 6px;
+  }
+
+  .page-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .page-btn.arrow {
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,125 @@
+/* FILTER NAVIGATION BAR */
+.filters-navbar {
+  display: flex;
+  gap: 16px;
+  padding: 18px 20px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px; /* EXTRA SPACE BELOW FILTERS */
+}
+
+/* GENERAL FILTER CONTROL STYLE */
+.filter-control {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #fafafa;
+  transition: 0.2s ease;
+  font-size: 0.92rem;
+  color: #374151;
+  min-width: 160px;
+}
+
+/* FULL-WIDTH SEARCH BAR */
+.filter-search {
+  flex: 1;            /* This makes search bar expand */
+  min-width: 220px;
+}
+
+/* Hover effect */
+.filter-control:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+/* Focus effect */
+.filter-control:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+  outline: none;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .filters-navbar {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .filter-search {
+    flex: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-control {
+    min-width: 100%;
+  }
+}
+.autocomplete-box {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 8px 0;
+  z-index: 50;
+  animation: fadeSlide 0.2s ease;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.autocomplete-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.autocomplete-item:hover {
+  background: #f3e8ff;
+  color: #6d28d9;
+}
+
+.auto-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.chip {
+  padding: 6px 14px;
+  background: #ede9fe;
+  color: #5b21b6;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 1px solid #d8b4fe;
+}
+
+.chip:hover {
+  background: #c4b5fd;
+  color: white;
+}

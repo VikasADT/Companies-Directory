@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Home from "./pages/Home";
+import "./styles/dark.css";
+import MorphingToggle from "./components/MorphingToggle";
 
-function App() {
+export default function App() {
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") setDark(true);
+  }, []);
+
+  const toggleTheme = () => {
+    const newVal = !dark;
+    setDark(newVal);
+    localStorage.setItem("theme", newVal ? "dark" : "light");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={dark ? "dark" : ""}>
+      <div className="theme-toggle-container">
+        <MorphingToggle dark={dark} toggle={toggleTheme} />
+      </div>
+
+      <Home />
     </div>
   );
 }
-
-export default App;
